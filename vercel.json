@@ -1,4 +1,39 @@
 {
+  "redirects": [
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "13auteam.com"
+        }
+      ],
+      "destination": "https://toppokiesaustralia.net/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.13auteam.com"
+        }
+      ],
+      "destination": "https://toppokiesaustralia.net/:path*",
+      "permanent": true
+    },
+    {
+      "source": "/:path*",
+      "has": [
+        {
+          "type": "host",
+          "value": "www.toppokiesaustralia.net"
+        }
+      ],
+      "destination": "https://toppokiesaustralia.net/:path*",
+      "permanent": true
+    }
+  ],
   "rewrites": [
     {
       "source": "/((?!.*\\.).*)",

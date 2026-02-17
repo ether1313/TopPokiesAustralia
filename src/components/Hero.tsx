@@ -1,16 +1,13 @@
-import { FaTelegramPlane } from 'react-icons/fa';
-
 export default function Hero() {
   return (
     <section className="max-w-7xl mx-auto px-4 py-6 sm:py-10">
       <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center rounded-2xl border border-blue-100 bg-gradient-to-br from-white to-blue-50/60 p-4 sm:p-6 lg:p-8 shadow-[0_10px_25px_rgba(15,47,102,0.08)]">
         <div className="text-center lg:text-left flex flex-col justify-center">
           <h1
-            className="font-extrabold tracking-wide text-[#0f2f66] leading-tight
+            className="font-lilita tracking-wide text-[#0f2f66] leading-tight
                        text-[clamp(1.6rem,4vw,2.8rem)]"
-            style={{ fontFamily: "'Bungee', cursive" }}
           >
-            BEST AUSTRALIA ONLINE CASINO
+            TRENDING AUSTRALIA ONLINE CASINO
           </h1>
 
           <p className="mt-3 text-sm sm:text-base lg:text-md text-blue-900/80">
@@ -35,7 +32,11 @@ export default function Hero() {
                          hover:shadow-xl transform transition-all duration-300 animate-shake
                          whitespace-nowrap sm:min-w-[clamp(140px,30vw,180px)] holo-blue"
             >
-              <FaTelegramPlane size={25} className="relative z-10" />
+              <img
+                src="/telegramlogo/telegram.png"
+                alt="Telegram"
+                className="w-7 h-7 object-contain relative z-10"
+              />
               <span className="relative z-10">Join Telegram</span>
             </a>
 
@@ -51,7 +52,7 @@ export default function Hero() {
                          whitespace-nowrap sm:min-w-[clamp(140px,30vw,180px)] holo-pink"
             >
               <img
-                src="/telegramlogo/sexy.webp"
+                src="/telegramlogo/sexy-mouth-with-tongue-out-and-strawberry-pop-art-style.png"
                 alt="Custom Icon"
                 className="w-8 h-8 object-contain relative z-10"
               />
