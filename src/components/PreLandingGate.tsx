@@ -13,18 +13,18 @@ type WinFeedItem = {
   secondsAgo: number;
 };
 
-const providers = [
-  'playtech',
-  'yeebet',
-  'big gaming',
-  'sexy baccarat',
-  'ct855',
-  'pragmatic play',
+const games = [
+  'PLAYTECH',
+  'YEEBET',
+  'BIG GAMING',
+  'SEXY BACCARAT',
+  'CT855',
+  'PRAGMATIC PLAY',
   'JDB2-3 [SPRIBE]',
   'EPICWIN',
   'MACROSS [ACEWIN]',
-  'wf',
-  'rg2',
+  'WF',
+  'RG2',
   'RG [RichGaming]',
   'JILI',
   'PP-1 [PragmaticPlay Slot]',
@@ -79,7 +79,7 @@ const providers = [
   'MEGA-1 [MEGA888-SLOT]',
   'BNG [BOOONGO]',
   'GMSDG [DREAM GAMING]',
-];
+].map((game) => game.toUpperCase());
 
 const cities = [
   'Sydney',
@@ -104,20 +104,21 @@ const makeMaskedPlayer = () => {
 };
 
 const makeAmount = () => {
-  const value = Math.floor(80 + Math.random() * 9200);
+  const value = Math.floor(80 + Math.random() * 2420);
   return value.toLocaleString('en-AU');
 };
 
 const makeFeedItem = (id: number): WinFeedItem => ({
   id,
   player: makeMaskedPlayer(),
-  provider: randomFrom(providers),
+  provider: randomFrom(games),
   amount: makeAmount(),
   city: randomFrom(cities),
   secondsAgo: 0,
 });
 
 const PreLandingGate = ({ onEnter }: PreLandingGateProps) => {
+  const FADE_DURATION_MS = 320;
   const seedItems = useMemo(
     () =>
       Array.from({ length: 8 }, (_, index) => ({
@@ -128,42 +129,103 @@ const PreLandingGate = ({ onEnter }: PreLandingGateProps) => {
   );
 
   const [feedItems, setFeedItems] = useState<WinFeedItem[]>(seedItems);
+  const [isVisible, setIsVisible] = useState(false);
+  const [isClosing, setIsClosing] = useState(false);
   const idRef = useRef(seedItems.length + 1);
+  const closeTimeoutRef = useRef<number | undefined>(undefined);
 
   useEffect(() => {
-    const pushTimer = window.setInterval(() => {
-      setFeedItems((prev) => {
-        const next = makeFeedItem(idRef.current++);
-        return [next, ...prev].slice(0, 10);
-      });
-    }, 1600);
+    const previousBodyOverflow = document.body.style.overflow;
+    const previousHtmlOverflow = document.documentElement.style.overflow;
+
+    document.body.style.overflow = 'hidden';
+    document.documentElement.style.overflow = 'hidden';
+
+    return () => {
+      document.body.style.overflow = previousBodyOverflow;
+      document.documentElement.style.overflow = previousHtmlOverflow;
+    };
+  }, []);
+
+  useEffect(() => {
+    const rafId = window.requestAnimationFrame(() => {
+      setIsVisible(true);
+    });
+    return () => window.cancelAnimationFrame(rafId);
+  }, []);
+
+  useEffect(() => {
+    let pushTimeout: number | undefined;
+
+    const nextDelay = () => {
+      // Simulate real feed rhythm: mostly quick updates with occasional slower gaps.
+      const isSlowGap = Math.random() < 0.25;
+      return isSlowGap
+        ? 2600 + Math.floor(Math.random() * 2200) // 2.6s - 4.8s
+        : 900 + Math.floor(Math.random() * 1500); // 0.9s - 2.4s
+    };
+
+    const scheduleNextPush = () => {
+      pushTimeout = window.setTimeout(() => {
+        setFeedItems((prev) => {
+          const next = makeFeedItem(idRef.current++);
+          return [next, ...prev].slice(0, 10);
+        });
+        scheduleNextPush();
+      }, nextDelay());
+    };
+
+    scheduleNextPush();
 
     const ageTimer = window.setInterval(() => {
-      setFeedItems((prev) =>
-        prev.map((item) => ({
+      setFeedItems((prev) => {
+        return prev.map((item) => ({
           ...item,
           secondsAgo: Math.min(item.secondsAgo + 1, 59),
-        }))
-      );
+        }));
+      });
     }, 1000);
 
     return () => {
-      window.clearInterval(pushTimer);
+      if (pushTimeout !== undefined) {
+        window.clearTimeout(pushTimeout);
+      }
       window.clearInterval(ageTimer);
     };
   }, []);
 
+  useEffect(() => {
+    return () => {
+      if (closeTimeoutRef.current !== undefined) {
+        window.clearTimeout(closeTimeoutRef.current);
+      }
+    };
+  }, []);
+
+  const handleClose = () => {
+    if (isClosing) return;
+    setIsClosing(true);
+    setIsVisible(false);
+    closeTimeoutRef.current = window.setTimeout(() => {
+      onEnter();
+    }, FADE_DURATION_MS);
+  };
+
   return (
     <section
-      className="fixed inset-0 z-[120] bg-slate-950/85 backdrop-blur-sm"
-      onClick={onEnter}
+      className={`fixed inset-0 z-[120] bg-slate-950/85 backdrop-blur-sm transition-opacity duration-300 ${
+        isVisible ? 'opacity-100' : 'opacity-0'
+      }`}
+      onClick={handleClose}
       aria-label="Pre landing live win feed overlay"
     >
       <div className="absolute inset-0 bg-[radial-gradient(circle_at_top,_rgba(59,130,246,0.28),_transparent_55%)]" />
 
       <div className="relative h-full w-full px-4 py-8 sm:px-6 md:py-10 flex items-center justify-center">
         <div
-          className="w-full max-w-2xl rounded-3xl border border-cyan-200/35 bg-[#071a42]/95 shadow-[0_24px_80px_-32px_rgba(8,145,178,0.75)]"
+          className={`w-full max-w-2xl rounded-3xl border border-cyan-200/35 bg-[#071a42]/95 shadow-[0_24px_80px_-32px_rgba(8,145,178,0.75)] transition-all duration-300 ${
+            isVisible ? 'opacity-100 translate-y-0 scale-100' : 'opacity-0 translate-y-2 scale-[0.98]'
+          }`}
           onClick={(event) => event.stopPropagation()}
           role="dialog"
           aria-modal="true"
@@ -172,7 +234,7 @@ const PreLandingGate = ({ onEnter }: PreLandingGateProps) => {
           <div className="relative border-b border-cyan-200/20 px-5 py-4 sm:px-6">
             <button
               type="button"
-              onClick={onEnter}
+              onClick={handleClose}
               aria-label="Close pre landing popup"
               className="absolute right-3 top-3 inline-flex h-8 w-8 items-center justify-center rounded-full border border-cyan-200/35 bg-blue-950/60 text-cyan-100 transition-colors hover:bg-blue-900/80"
             >
@@ -215,7 +277,7 @@ const PreLandingGate = ({ onEnter }: PreLandingGateProps) => {
             <div className="mt-4">
               <button
                 type="button"
-                onClick={onEnter}
+                onClick={handleClose}
                 className="group relative w-full overflow-hidden rounded-xl border border-cyan-200/40 bg-gradient-to-r from-[#2563eb] via-[#1d4ed8] to-[#0f2f66] px-5 py-3 text-white shadow-[0_0_22px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)]"
               >
                 <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-cyan-200/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />

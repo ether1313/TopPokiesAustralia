@@ -134,7 +134,7 @@ const Provider: React.FC = () => {
                 <img
                   src={brand.logo}
                   alt={`${brand.name} provider logo`}
-                  className="relative h-6 sm:h-12 md:h-14 w-full object-contain brightness-110"
+                  className="relative h-8 sm:h-12 md:h-14 w-full object-contain brightness-110"
                 />
               </div>
             ))}

@@ -18,6 +18,11 @@ function App() {
   const [hasEnteredPreLanding, setHasEnteredPreLanding] = useState(false);
 
   useEffect(() => {
+    window.history.scrollRestoration = 'manual';
+    window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+  }, [pathname]);
+
+  useEffect(() => {
     const setMeta = (name: string, content: string, isProperty = false) => {
       const selector = isProperty
         ? `meta[property="${name}"]`
