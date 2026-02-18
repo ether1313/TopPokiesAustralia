@@ -1,6 +1,7 @@
 import { useEffect, useState } from 'react';
 import Header from './components/Header';
 import Hero from './components/Hero';
+import PersonalizedQuiz from './components/PersonalizedQuiz';
 import GamePlatforms from './components/GamePlatforms';
 import LiveWithdrawals from './components/LiveWithdrawals';
 import PlayerReviews from './components/PlayerReviews';
@@ -19,6 +20,24 @@ function App() {
 
   useEffect(() => {
     window.history.scrollRestoration = 'manual';
+    const navigationEntry = performance.getEntriesByType('navigation')[0] as PerformanceNavigationTiming | undefined;
+    const isReload = navigationEntry?.type === 'reload';
+    if (isReload) {
+      window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      return;
+    }
+    const hash = window.location.hash;
+    if (hash) {
+      window.requestAnimationFrame(() => {
+        const target = document.querySelector(hash);
+        if (target) {
+          target.scrollIntoView({ behavior: 'auto', block: 'start' });
+          return;
+        }
+        window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
+      });
+      return;
+    }
     window.scrollTo({ top: 0, left: 0, behavior: 'auto' });
   }, [pathname]);
 
@@ -116,6 +135,7 @@ function App() {
             <GamePlatforms />
             <LiveWithdrawals />
             <PlayerReviews />
+            <PersonalizedQuiz />
             <Provider />
             <AboutUs />
             <Certifications />

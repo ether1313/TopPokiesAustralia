@@ -6,9 +6,11 @@ const Header: React.FC = () => {
   const pathname = window.location.pathname.replace(/\/$/, '');
   const isAboutTopPokiesPage = pathname === '/about-toppokiesaustralia';
   const walletStationsHref = isAboutTopPokiesPage ? '/#platforms' : '#platforms';
+  const personalizedQuizHref = isAboutTopPokiesPage ? '/#personalized-quiz' : '#personalized-quiz';
 
   const menuItems = [
     { label: 'Wallet Stations', href: walletStationsHref },
+    { label: 'Personalized Quiz', href: personalizedQuizHref },
     { label: 'About Us', href: '/about-toppokiesaustralia' },
   ];
 
