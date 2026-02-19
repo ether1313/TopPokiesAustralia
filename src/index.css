@@ -147,13 +147,48 @@ html {
   100% { opacity: 0; transform: scale(0.8); }
 }
 
-/* CLAIM NOW 字眼跳动效果 */
-@keyframes bounceText {
-  0%, 100% { transform: translateY(0); }
-  50% { transform: translateY(-5px); }
+/* CLAIM NOW heartbeat + low-frequency attention ring */
+@keyframes heartbeatText {
+  0%, 42%, 100% { transform: scale(1); }
+  10% { transform: scale(1.08); }
+  20% { transform: scale(0.98); }
+  30% { transform: scale(1.05); }
 }
-.animate-bounce-text {
-  animation: bounceText 0.9s ease-in-out infinite;
+
+.animate-heartbeat-text {
+  animation: heartbeatText 1.8s ease-in-out infinite;
+  will-change: transform;
+}
+
+@keyframes attentionRing {
+  0%, 78%, 100% {
+    opacity: 0;
+    transform: scale(1);
+  }
+  8% {
+    opacity: 0.35;
+    transform: scale(1.02);
+  }
+  18% {
+    opacity: 0;
+    transform: scale(1.07);
+  }
+}
+
+.claim-attention-ring {
+  position: relative;
+  isolation: isolate;
+}
+
+.claim-attention-ring::after {
+  content: "";
+  position: absolute;
+  inset: -2px;
+  border-radius: inherit;
+  border: 1px solid rgba(147, 197, 253, 0.55);
+  pointer-events: none;
+  animation: attentionRing 3.8s ease-out infinite;
+  z-index: -1;
 }
 
 /* Games Platform的logo跳动效果 */

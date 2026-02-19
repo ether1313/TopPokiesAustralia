@@ -10,7 +10,7 @@ const Header: React.FC = () => {
 
   const menuItems = [
     { label: 'Wallet Stations', href: walletStationsHref },
-    { label: 'Personalized Quiz', href: personalizedQuizHref },
+    { label: 'Custom Suite', href: personalizedQuizHref },
     { label: 'About Us', href: '/about-toppokiesaustralia' },
   ];
 

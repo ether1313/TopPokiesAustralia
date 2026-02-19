@@ -278,9 +278,8 @@ const PreLandingGate = ({ onEnter }: PreLandingGateProps) => {
               <button
                 type="button"
                 onClick={handleClose}
-                className="group relative w-full overflow-hidden rounded-xl border border-cyan-200/40 bg-gradient-to-r from-[#2563eb] via-[#1d4ed8] to-[#0f2f66] px-5 py-3 text-white shadow-[0_0_22px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.01] hover:shadow-[0_0_30px_rgba(34,211,238,0.5)]"
+                className="w-full rounded-xl border border-cyan-200/40 bg-[#1d4ed8] px-5 py-3 text-white shadow-[0_0_22px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.01] hover:bg-[#1e40af]"
               >
-                <span className="pointer-events-none absolute inset-0 -translate-x-full bg-gradient-to-r from-transparent via-cyan-200/30 to-transparent transition-transform duration-700 group-hover:translate-x-full" />
                 <span className="relative flex items-center justify-center gap-2 font-lilita tracking-wide text-lg">
                   <span>ENTER SITE</span>
                   <span className="text-base">{'>'}</span>

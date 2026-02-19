@@ -302,10 +302,10 @@ const GamePlatforms: React.FC = () => {
                 {/* CTA 按鈕 */}
                 <button
                   onClick={() => window.open(platform.url, "_blank")}
-                  className="relative w-full bg-gradient-to-r from-[#1d4ed8] to-[#0f2f66] rounded-xl py-2.5 sm:py-3.5 hover:scale-[1.02] transition-transform duration-300 shadow-[0_0_12px_rgba(15,47,102,0.35)]"
+                  className="claim-attention-ring relative w-full bg-[#1d4ed8] rounded-xl py-2 sm:py-2.5 hover:bg-[#1e40af] hover:scale-[1.02] transition-all duration-300 shadow-[0_0_12px_rgba(15,47,102,0.35)]"
                 >
                   <div className="w-full flex items-center justify-center space-x-1 sm:space-x-2 font-lilita">
-                    <span className="text-[clamp(16px,2vw,28px)] font-bold tracking-wide text-white animate-bounce-text drop-shadow-[0_0_10px_rgba(147,197,253,0.75)]">
+                    <span className="text-[clamp(16px,2vw,28px)] font-bold tracking-wide text-white animate-heartbeat-text">
                       CLAIM NOW
                     </span>
                   </div>

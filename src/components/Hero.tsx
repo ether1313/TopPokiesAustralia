@@ -27,10 +27,10 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="relative inline-flex flex-1 min-w-0 sm:flex-none items-center justify-center space-x-1 sm:space-x-2
                          px-[clamp(12px,3vw,24px)] py-[clamp(10px,2vw,14px)]
-                         text-white rounded-lg font-semibold
+                         text-white rounded-lg font-semibold border border-blue-300/35 bg-[#0f2f66]
                          text-[clamp(12px,3.8vw,18px)] shadow-md
-                         hover:shadow-xl transform transition-all duration-300 animate-shake
-                         whitespace-nowrap sm:min-w-[clamp(140px,30vw,180px)] holo-blue"
+                         hover:shadow-xl hover:bg-[#0c2856] transform transition-all duration-300 animate-shake
+                         whitespace-nowrap sm:min-w-[clamp(140px,30vw,180px)]"
             >
               <img
                 src="/telegramlogo/telegram.png"
@@ -46,10 +46,10 @@ export default function Hero() {
               rel="noopener noreferrer"
               className="relative inline-flex flex-1 min-w-0 sm:flex-none items-center justify-center space-x-1 sm:space-x-2
                          px-[clamp(12px,3vw,24px)] py-[clamp(10px,2vw,14px)]
-                         text-white rounded-lg font-semibold
+                         text-[#0f2f66] rounded-lg font-semibold border border-pink-200/80 bg-[#fbcfe8]
                          text-[clamp(12px,3.8vw,18px)] shadow-md
-                         hover:shadow-xl transform transition-all duration-300 animate-shake
-                         whitespace-nowrap sm:min-w-[clamp(140px,30vw,180px)] holo-pink"
+                         hover:shadow-xl hover:bg-[#f9b9dd] transform transition-all duration-300 animate-shake
+                         whitespace-nowrap sm:min-w-[clamp(140px,30vw,180px)]"
             >
               <img
                 src="/telegramlogo/sexy-mouth-with-tongue-out-and-strawberry-pop-art-style.png"
