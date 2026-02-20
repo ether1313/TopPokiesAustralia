@@ -252,9 +252,7 @@ const PreLandingGate = ({ onEnter }: PreLandingGateProps) => {
               <span className="text-lg leading-none">x</span>
             </button>
             <h2 className="mt-1 text-white text-xl sm:text-2xl font-lilita tracking-wide font-bold">LIVE WIN FEED</h2>
-            <p className="mt-2 text-cyan-100/80 text-xs sm:text-sm">
-              Real-time style win stream simulation from partnership game providers.
-            </p>
+
           </div>
 
           <div className="px-4 py-4 sm:px-6">
@@ -298,9 +296,6 @@ const PreLandingGate = ({ onEnter }: PreLandingGateProps) => {
               </button>
             </div>
 
-            <p className="mt-3 text-center text-[11px] text-cyan-100/60">
-              Dynamic activity preview showcasing real-time style win momentum.
-            </p>
           </div>
         </div>
       </div>
