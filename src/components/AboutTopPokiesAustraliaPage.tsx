@@ -76,9 +76,6 @@ const AboutTopPokiesAustraliaPage: React.FC = () => {
             <span className="block text-[#0b2a63] text-[clamp(2.1rem,5.6vw,3.3rem)] drop-shadow-[0_2px_0_rgba(147,197,253,0.35)]">
               TopPokiesAustralia
             </span>
-            <span className="block mt-1 text-[clamp(1.2rem,3.2vw,2rem)] font-semibold text-blue-700">
-              Trusted Online Casino Australia Guide
-            </span>
           </h1>
           <p className="mt-4 text-blue-900/80 text-sm sm:text-base leading-relaxed">
             We combine independent casino research with verified partnership intelligence to help Australian players find

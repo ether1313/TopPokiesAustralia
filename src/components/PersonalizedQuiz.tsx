@@ -225,7 +225,7 @@ const PersonalizedQuiz = () => {
             type="button"
             onClick={getRecommendations}
             disabled={!isComplete || submitted}
-            className={`w-full sm:w-auto rounded-lg sm:rounded-xl px-5 py-3 font-lilita tracking-wide text-lg transition-all duration-300 ${
+            className={`w-full sm:w-auto rounded-lg sm:rounded-xl px-5 py-3 font-lilita font-bold tracking-wide text-lg transition-all duration-300 ${
               isComplete && !submitted
                 ? 'bg-[#1d4ed8] text-white shadow-md sm:shadow-[0_0_20px_rgba(37,99,235,0.4)] hover:bg-[#1e40af] hover:scale-[1.01]'
                 : 'bg-blue-900/40 text-blue-200/60 cursor-not-allowed'
@@ -264,7 +264,7 @@ const PersonalizedQuiz = () => {
                     className="h-10 sm:h-12 w-auto object-contain drop-shadow-[0_0_8px_rgba(147,197,253,0.45)]"
                   />
                 </div>
-                <h3 className="mt-1.5 text-white font-lilita text-xl sm:text-2xl tracking-wide">{partner.name}</h3>
+                <h3 className="mt-1.5 text-white font-lilita font-bold text-xl sm:text-2xl tracking-wide">{partner.name}</h3>
                 <p className="mt-2 text-blue-100/85 text-[13px] sm:text-sm">
                   Min deposit AUD {partner.minDeposit} · {partner.fastPayout ? 'Fast payout oriented' : 'Balanced value pick'}
                 </p>

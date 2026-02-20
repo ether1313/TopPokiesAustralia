@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import { Menu, X } from 'lucide-react';
+import OnlineUsersSocialProof from './OnlineUsersSocialProof';
 
 const Header: React.FC = () => {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -10,7 +11,7 @@ const Header: React.FC = () => {
 
   const menuItems = [
     { label: 'Wallet Stations', href: walletStationsHref },
-    { label: 'Custom Suite', href: personalizedQuizHref },
+    { label: 'Match Finder', href: personalizedQuizHref },
     { label: 'About Us', href: '/about-toppokiesaustralia' },
   ];
 
@@ -53,6 +54,7 @@ const Header: React.FC = () => {
                 {item.label}
               </a>
             ))}
+            <OnlineUsersSocialProof />
           </nav>
 
           {/* Mobile Hamburger */}
@@ -74,6 +76,9 @@ const Header: React.FC = () => {
         {isMenuOpen && (
           <nav className="md:hidden pb-4">
             <div className="flex flex-col gap-2 pt-1">
+              <div className="py-1">
+                <OnlineUsersSocialProof />
+              </div>
               {menuItems.map((item) => (
                 <a
                   key={item.label}
