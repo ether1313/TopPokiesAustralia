@@ -241,7 +241,7 @@ const GamePlatforms: React.FC = () => {
                     <div className="text-[9px] sm:text-[11px] lg:text-[12px] font-medium opacity-75">
                       MIN DEPOSIT
                     </div>
-                    <div className="text-[17px] sm:text-[22px] lg:text-[24px] font-lilita text-white whitespace-nowrap font-semibold">
+                    <div className="text-[17px] sm:text-[22px] lg:text-[24px] font-lilita text-white whitespace-nowrap font-bold">
                       {platform.minDeposit}{" "}
                       <span className="text-[11px] sm:text-[13px] lg:text-[14px] font-bold">
                         AUD
@@ -253,7 +253,7 @@ const GamePlatforms: React.FC = () => {
                     <div className="text-[9px] sm:text-[11px] lg:text-[12px] font-medium opacity-75">
                       TOTAL GAMES
                     </div>
-                    <div className="text-[17px] sm:text-[22px] lg:text-[24px] font-lilita text-white whitespace-nowrap font-semibold">
+                    <div className="text-[17px] sm:text-[22px] lg:text-[24px] font-lilita text-white whitespace-nowrap font-bold">
                       {platform.totalGames}
                     </div>
                   </div>
@@ -273,7 +273,7 @@ const GamePlatforms: React.FC = () => {
                     <div className="text-[12px] sm:text-[14px] lg:text-[15px] font-medium opacity-70 leading-tight">
                       Register Free
                     </div>
-                    <div className="text-[18px] sm:text-[26px] lg:text-[28px] font-lilita text-[#0f2f66] whitespace-nowrap leading-none font-semibold">
+                    <div className="text-[18px] sm:text-[26px] lg:text-[28px] font-lilita text-[#0f2f66] whitespace-nowrap leading-none font-bold">
                       {platform.registerFree}
                     </div>
                   </div>
@@ -283,7 +283,7 @@ const GamePlatforms: React.FC = () => {
                     <div className="text-[12px] sm:text-[14px] lg:text-[15px] font-medium opacity-70 leading-tight">
                       Welcome Bonus
                     </div>
-                    <div className="text-[18px] sm:text-[26px] lg:text-[28px] font-lilita text-[#0f2f66] whitespace-nowrap leading-none font-semibold">
+                    <div className="text-[18px] sm:text-[26px] lg:text-[28px] font-lilita text-[#0f2f66] whitespace-nowrap leading-none font-bold">
                       {platform.welcomeBonus}
                     </div>
                   </div>
@@ -293,7 +293,7 @@ const GamePlatforms: React.FC = () => {
                     <div className="text-[12px] sm:text-[14px] lg:text-[15px] font-medium opacity-70 leading-tight">
                       VIP Special
                     </div>
-                    <div className="text-[18px] sm:text-[26px] lg:text-[28px] font-lilita text-[#0f2f66] whitespace-nowrap leading-none font-semibold">
+                    <div className="text-[18px] sm:text-[26px] lg:text-[28px] font-lilita text-[#0f2f66] whitespace-nowrap leading-none font-bold">
                       {platform.vipFree}
                     </div>
                   </div>
@@ -306,7 +306,7 @@ const GamePlatforms: React.FC = () => {
                 >
                   <div className="w-full flex items-center justify-center space-x-1 sm:space-x-2 font-lilita">
                     <span className="text-[clamp(16px,2vw,28px)] font-bold tracking-wide text-white animate-heartbeat-text">
-                      CLAIM NOW
+                      Claim Now
                     </span>
                   </div>
                 </button>
