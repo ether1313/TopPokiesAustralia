@@ -100,7 +100,7 @@ const makeMaskedPlayer = () => {
   const first = randomFrom(alphabet.split(''));
   const second = randomFrom(alphabet.split(''));
   const tail = Math.floor(100 + Math.random() * 900);
-  return `${first}${second}***${tail}`;
+  return `${first}${second}******${tail}`;
 };
 
 const makeAmount = () => {
@@ -169,7 +169,6 @@ const PreLandingGate = ({ onEnter }: PreLandingGateProps) => {
     let pushTimeout: number | undefined;
 
     const nextDelay = () => {
-      // Simulate real feed rhythm: mostly quick updates with occasional slower gaps.
       const isSlowGap = Math.random() < 0.25;
       return isSlowGap
         ? 2600 + Math.floor(Math.random() * 2200) // 2.6s - 4.8s
