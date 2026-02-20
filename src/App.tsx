@@ -11,6 +11,7 @@ import AboutUs from './components/AboutUs';
 import AboutTopPokiesAustraliaPage from './components/AboutTopPokiesAustraliaPage';
 import Footer from './components/Footer';
 import PreLandingGate from './components/PreLandingGate';
+import SupportSection from './components/SupportSection';
 
 function App() {
   const pathname = window.location.pathname.replace(/\/$/, '');
@@ -142,6 +143,7 @@ function App() {
           </>
         )}
       </main>
+      <SupportSection />
       <Footer />
     </div>
   );

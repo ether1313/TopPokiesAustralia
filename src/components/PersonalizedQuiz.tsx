@@ -130,8 +130,8 @@ const PersonalizedQuiz = () => {
           <p className="inline-flex rounded-full border border-cyan-200/35 bg-cyan-400/10 px-3 py-1 text-[11px] sm:text-xs font-semibold uppercase tracking-[0.16em] text-cyan-100">
             Private Suite
           </p>
-          <h2 className="mt-3 sm:mt-4 text-white font-lilita tracking-wide text-[clamp(1.5rem,4.5vw,2.4rem)]">
-            Find Your Best-Fit Casino In 30 Seconds
+          <h2 className="mt-3 sm:mt-4 text-white font-lilita font-bold tracking-wide text-[clamp(1.5rem,4.5vw,2.4rem)]">
+            Find Your Best-Fit Casino In 5 Seconds
           </h2>
           <p className="mt-2.5 sm:mt-3 text-blue-100/80 text-[13px] sm:text-base">
             Answer 3 quick questions and get 1-2 personalized partner recommendations with direct access links.

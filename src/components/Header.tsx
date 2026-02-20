@@ -29,7 +29,7 @@ const Header: React.FC = () => {
               <img
                 src="/headerlogo/TopPokiesAustralia.png"
                 alt="TopPokiesAustralia Logo"
-                className="relative w-10 h-10 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-xl drop-shadow-[0_0_12px_rgba(37,99,235,0.35)]"
+                className="relative w-14 h-14 sm:w-12 sm:h-12 lg:w-14 lg:h-14 rounded-xl drop-shadow-[0_0_12px_rgba(37,99,235,0.35)]"
               />
             </div>
             <div className="ml-2 sm:ml-3 leading-tight">

@@ -4,8 +4,8 @@ export default {
   theme: {
     extend: {
       fontFamily: {
-        rubik: ['"Rubik"', 'sans-serif'], 
-        lilita: ['"Lilita One"', 'cursive'],
+        rubik: ['"Open Sans"', 'sans-serif'],
+        lilita: ['"Open Sans"', 'sans-serif'],
       },
     },
   },

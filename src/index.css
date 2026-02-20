@@ -35,6 +35,16 @@ html {
   scroll-behavior: smooth;
 }
 
+body,
+#root {
+  font-family: 'Open Sans', sans-serif;
+}
+
+.font-lilita,
+.font-rubik {
+  font-family: 'Open Sans', sans-serif !important;
+}
+
 /* Custom scrollbar */
 ::-webkit-scrollbar {
   width: 8px;

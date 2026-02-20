@@ -20,19 +20,19 @@ const AboutUs: React.FC = () => {
 
         <div className="mt-8 grid grid-cols-1 md:grid-cols-3 gap-4 sm:gap-5">
           <div className="rounded-2xl border border-blue-100 bg-blue-50/55 p-4 sm:p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-700">Partnership Network</p>
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-700">Partnership Network</p>
             <p className="mt-2 text-sm text-blue-900/80 leading-relaxed">
               We work with recognized iGaming brands and payment-ready operators across Australia-focused markets.
             </p>
           </div>
           <div className="rounded-2xl border border-blue-100 bg-blue-50/55 p-4 sm:p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-700">Player Experience</p>
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-700">Player Experience</p>
             <p className="mt-2 text-sm text-blue-900/80 leading-relaxed">
               From onboarding to withdrawals, we prioritize fast navigation, clear bonus promotions, and responsive support.
             </p>
           </div>
           <div className="rounded-2xl border border-blue-100 bg-blue-50/55 p-4 sm:p-5">
-            <p className="text-xs font-semibold uppercase tracking-[0.14em] text-blue-700">Trust Framework</p>
+            <p className="text-xs font-bold uppercase tracking-[0.14em] text-blue-700">Trust Framework</p>
             <p className="mt-2 text-sm text-blue-900/80 leading-relaxed">
               Every featured partner is reviewed against internal quality checks for security, transparency, and fairness.
             </p>
@@ -41,7 +41,7 @@ const AboutUs: React.FC = () => {
 
         <div className="mt-8 grid grid-cols-1 lg:grid-cols-2 gap-5 sm:gap-6">
           <div className="rounded-2xl border border-blue-100 p-5 sm:p-6">
-            <h3 className="text-lg font-semibold text-[#0f2f66]">How Our Partnership Model Works</h3>
+            <h3 className="text-lg font-bold text-[#0f2f66]">How Our Partnership Model Works</h3>
             <ul className="mt-4 space-y-2.5 text-sm sm:text-base text-blue-900/80 leading-relaxed">
               <li>We onboard providers with strong product quality and stable game performance.</li>
               <li>We align with partners that support convenient deposits and efficient withdrawal flows.</li>
@@ -51,7 +51,7 @@ const AboutUs: React.FC = () => {
           </div>
 
           <div className="rounded-2xl border border-blue-100 p-5 sm:p-6 bg-gradient-to-br from-blue-50 to-white">
-            <h3 className="text-lg font-semibold text-[#0f2f66]">What Players Can Expect</h3>
+            <h3 className="text-lg font-bold text-[#0f2f66]">What Players Can Expect</h3>
             <ul className="mt-4 space-y-2.5 text-sm sm:text-base text-blue-900/80 leading-relaxed">
               <li>Curated real-money game brands, including pokies and live casino categories.</li>
               <li>Clear bonus and campaign presentation with easier side-by-side comparison.</li>
@@ -62,7 +62,7 @@ const AboutUs: React.FC = () => {
         </div>
 
         <div className="mt-8 rounded-2xl border border-blue-200 bg-blue-600 px-5 py-5 sm:px-6 sm:py-6 text-white">
-          <h3 className="text-lg sm:text-xl font-semibold">Our Commitment</h3>
+          <h3 className="text-lg sm:text-xl font-bold">Our Commitment</h3>
           <p className="mt-2 text-sm sm:text-base leading-relaxed text-blue-50/95">
             TopPokiesAustralia exists to build long-term value between players and iGaming brands through trusted
             partnerships. Our goal is simple: deliver a cleaner, safer, and more rewarding online gaming experience
