@@ -8,7 +8,7 @@ const AboutUs: React.FC = () => {
           <p className="inline-flex items-center rounded-full border border-blue-200 bg-blue-50 px-3 py-1 text-xs font-semibold tracking-[0.18em] uppercase text-blue-700">
             About TopPokiesAustralia
           </p>
-          <h2 className="mt-4 text-[clamp(1.8rem,4.6vw,2.6rem)] font-bold text-[#0f2f66]">
+          <h2 className="mt-4 text-[clamp(1.8rem,4.6vw,2.6rem)] font-bold text-[#0f2f66] leading-tight">
             Built for Trusted iGaming Partnership
           </h2>
           <p className="mt-4 text-sm sm:text-base leading-relaxed text-blue-900/80">

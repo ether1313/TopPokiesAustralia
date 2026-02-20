@@ -4,10 +4,10 @@ export default function Hero() {
       <div className="grid lg:grid-cols-2 gap-6 lg:gap-8 items-center rounded-2xl border border-blue-100 bg-gradient-to-br from-white to-blue-50/60 p-4 sm:p-6 lg:p-8 shadow-[0_10px_25px_rgba(15,47,102,0.08)]">
         <div className="text-center lg:text-left flex flex-col justify-center">
           <h1
-            className="font-lilita font-extrabold tracking-wide text-[#0f2f66] leading-none
+            className="font-lilita font-extrabold tracking-wide text-[#0f2f66] leading-tight
                        text-[clamp(1.6rem,4vw,2.2rem)]"
           >
-            Top Rank Australia Online Casino Wallet
+            BEST Rank Australia Online Casino Wallet
           </h1>
 
           <p className="mt-3 text-sm sm:text-base lg:text-md text-blue-900/80">
