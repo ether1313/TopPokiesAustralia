@@ -1,8 +1,8 @@
 import { useEffect, useState } from 'react';
 
-const MIN_USERS = 368;
-const MAX_USERS = 489;
-const INITIAL_USERS = 421;
+const MIN_USERS = 200;
+const MAX_USERS = 500;
+const INITIAL_USERS = Math.floor(Math.random() * (MAX_USERS - MIN_USERS + 1)) + MIN_USERS;
 
 const clamp = (value: number, min: number, max: number) => Math.min(max, Math.max(min, value));
 
