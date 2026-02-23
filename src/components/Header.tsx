@@ -18,8 +18,9 @@ const Header: React.FC = () => {
   return (
     <header
       className="relative z-30 w-full
-      bg-[#0f2f66] border-b border-blue-500/40
-      shadow-[0_10px_22px_rgba(15,47,102,0.28)]"
+      bg-gradient-to-r from-[#eaf2ff] via-[#dbeafe] to-[#cfe8ff]
+      border-b border-blue-200/80
+      shadow-[0_10px_22px_rgba(30,64,175,0.14)]"
     >
       <div className="max-w-7xl mx-auto px-4 sm:px-8 lg:px-10">
         <div className="flex items-center justify-between h-14 sm:h-16">
@@ -36,7 +37,7 @@ const Header: React.FC = () => {
             <div className="ml-2 sm:ml-3 leading-tight">
               <span
                 className="text-base sm:text-xl lg:text-xl font-bold 
-                text-white drop-shadow-[0_1px_1px_rgba(15,47,102,0.4)]"
+                text-[#0f2f66] drop-shadow-[0_1px_1px_rgba(255,255,255,0.55)]"
               >
                 TopPokiesAustralia
               </span>
@@ -49,7 +50,7 @@ const Header: React.FC = () => {
               <a
                 key={item.label}
                 href={item.href}
-                className="rounded-full border border-blue-300/60 bg-blue-500/20 px-4 py-2 text-sm lg:text-base font-semibold text-white transition-all duration-300 hover:bg-blue-500/35 hover:border-blue-200/80"
+                className="rounded-full border border-blue-300/80 bg-white/65 px-4 py-2 text-sm lg:text-base font-semibold text-[#0f2f66] transition-all duration-300 hover:bg-blue-100/70 hover:border-blue-400/80"
               >
                 {item.label}
               </a>
@@ -64,7 +65,7 @@ const Header: React.FC = () => {
               aria-label={isMenuOpen ? 'Close menu' : 'Open menu'}
               aria-expanded={isMenuOpen}
               onClick={() => setIsMenuOpen((prev) => !prev)}
-              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-blue-300/60 bg-blue-500/20 text-white shadow-sm"
+              className="inline-flex h-10 w-10 items-center justify-center rounded-xl border border-blue-300/80 bg-white/70 text-[#0f2f66] shadow-sm"
             >
               {isMenuOpen ? <X size={20} /> : <Menu size={20} />}
             </button>
@@ -84,7 +85,7 @@ const Header: React.FC = () => {
                   key={item.label}
                   href={item.href}
                   onClick={() => setIsMenuOpen(false)}
-                  className="rounded-xl border border-blue-300/60 bg-blue-500/20 px-4 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-blue-500/35"
+                  className="rounded-xl border border-blue-300/80 bg-white/70 px-4 py-2.5 text-sm font-semibold text-[#0f2f66] transition-colors hover:bg-blue-100/70"
                 >
                   {item.label}
                 </a>

@@ -5,16 +5,16 @@ export default function Hero() {
         <div className="text-center lg:text-left flex flex-col justify-center">
           <h1
             className="font-lilita font-extrabold tracking-wide text-[#0f2f66] leading-tight
-                       text-[clamp(1.6rem,4vw,2.2rem)]"
+                       text-[clamp(1.2rem,4vw,2.2rem)]"
           >
             BEST Rank Australia Online Casino Wallet
           </h1>
 
-          <p className="mt-3 text-sm sm:text-base lg:text-md text-blue-900/80">
+          <p className="mt-3 text-xs sm:text-base lg:text-md text-blue-900/80">
           Our featured online casino partners are selected through a structured review process, offering Australian players access to reliable platforms for online entertainment.
           </p>
 
-          <div className="mt-4 flex flex-wrap gap-2 justify-center lg:justify-start">
+          <div className="mt-4 hidden sm:flex flex-wrap gap-2 justify-center lg:justify-start">
             <span className="rounded-full bg-white/80 border border-blue-100 px-3 py-1 text-xs font-semibold text-[#0f2f66]">Fast Payout</span>
             <span className="rounded-full bg-white/80 border border-blue-100 px-3 py-1 text-xs font-semibold text-[#0f2f66]">No Deposit Bonus</span>
             <span className="rounded-full bg-white/80 border border-blue-100 px-3 py-1 text-xs font-semibold text-[#0f2f66]">Licensed Partners</span>

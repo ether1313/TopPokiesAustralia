@@ -282,3 +282,33 @@ body,
 .fintech-glow {
   animation: fintechPulse 2.6s ease-in-out infinite;
 }
+
+@keyframes newTabBreathe {
+  0%, 100% {
+    background-color: #ef4444;
+    border-color: #ef4444;
+    color: #ffffff;
+  }
+  50% {
+    background-color: #ffffff;
+    border-color: #ef4444;
+    color: #dc2626;
+  }
+}
+
+.animate-new-tab-breathe {
+  animation: newTabBreathe 1.9s ease-in-out infinite;
+}
+
+@keyframes newTabBreatheActive {
+  0%, 100% {
+    filter: brightness(1);
+  }
+  50% {
+    filter: brightness(1.08);
+  }
+}
+
+.animate-new-tab-breathe-active {
+  animation: newTabBreatheActive 1.9s ease-in-out infinite;
+}

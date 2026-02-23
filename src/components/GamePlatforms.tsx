@@ -176,7 +176,19 @@ const shuffleArray = <T,>(array: T[]): T[] => {
 const GamePlatforms: React.FC = () => {
   const [selectedCategory, setSelectedCategory] = useState<Category>('All');
   const categories: Category[] = ['All', 'New', 'Premium', 'VIP', 'Bonuses'];
-  const shuffledPlatforms = useMemo(() => shuffleArray<Platform>(platforms), []);
+  const shuffledPlatforms = useMemo(() => {
+    const priorityLogos = ['ipay9', 'kingbet9', 'bp77'];
+    const fixedTop = priorityLogos
+      .map((logoKey) => platforms.find((platform) => platform.logo.includes(`${logoKey}.png`)))
+      .filter((platform): platform is Platform => Boolean(platform));
+
+    const fixedTopIds = new Set(fixedTop.map((platform) => platform.id));
+    const randomOthers = shuffleArray<Platform>(
+      platforms.filter((platform) => !fixedTopIds.has(platform.id))
+    );
+
+    return [...fixedTop, ...randomOthers];
+  }, []);
   const filteredPlatforms = useMemo(
     () =>
       selectedCategory === 'All'
@@ -192,14 +204,19 @@ const GamePlatforms: React.FC = () => {
           <div className="min-w-max md:min-w-0 md:w-full flex items-center gap-2 sm:gap-3">
             {categories.map((category) => {
               const isActive = selectedCategory === category;
+              const isNewCategory = category === 'New';
               return (
                 <button
                   key={category}
                   onClick={() => setSelectedCategory(category)}
                   className={`shrink-0 md:flex-1 md:text-center rounded-full px-4 sm:px-6 py-2 sm:py-2.5 text-sm sm:text-base font-semibold transition-all duration-300 border ${
-                    isActive
-                      ? 'bg-[#0f2f66] text-white border-[#0f2f66] shadow-[0_6px_14px_rgba(15,47,102,0.25)]'
-                      : 'bg-white text-[#0f2f66] border-blue-200 hover:bg-blue-50'
+                    isNewCategory
+                      ? isActive
+                        ? 'bg-[#ec2a2a] text-white border-[#ef4444] animate-new-tab-breathe-active'
+                        : 'bg-white text-[#dc2626] border-[#ef4444] hover:bg-white animate-new-tab-breathe'
+                      : isActive
+                        ? 'bg-[#0f2f66] text-white border-[#0f2f66] shadow-[0_6px_14px_rgba(15,47,102,0.25)]'
+                        : 'bg-white text-[#0f2f66] border-blue-200 hover:bg-blue-50'
                   }`}
                 >
                   {category}
