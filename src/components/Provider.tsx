@@ -71,7 +71,7 @@ const gameBanners: GameBanner[] = [
 
 const randomPartnerLinks = [
   'https://ipay9aud.com/RFPARNERSHIPSEO',
-  'https://kingbet9bet.com/RFPARNERSHIPSEO1SEO',
+  'https://king9au.com/RFPARNERSHIPSEO1SEO',
   'https://bigpay77.net/RFBP77PARNERSHIPSEO',
   'https://rolex9au.com/RFR9PARTNERSHIPSEO',
   'https://bybid9.net/RFBYPARTNERSHIPSEO',
