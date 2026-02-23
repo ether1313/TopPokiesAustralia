@@ -1,6 +1,7 @@
 import React, { useMemo, useState } from 'react';
 
 type Category = 'All' | 'New' | 'Premium' | 'VIP' | 'Bonuses';
+const NEW_BADGE_SRC = '/new-badge.png';
 
 // 定义 Platform 类型
 type Platform = {
@@ -243,12 +244,21 @@ const GamePlatforms: React.FC = () => {
               {/* 上半部分 */}
               <div className="bg-[#0f2f66] text-white py-2 px-3 sm:px-5 grid grid-cols-3 items-center w-full">
                 <div className="flex justify-start items-center w-full">
-                  <img
-                    src={platform.logo}
-                    alt="Platform Logo"
-                    className="w-[130px] h-[42px] sm:w-[180px] sm:h-[60px] lg:w-[220px] lg:h-[74px] 
-                      object-contain drop-shadow-lg filter brightness-145"
-                  />
+                  <div className="flex items-start gap-4 sm:gap-6">
+                    <img
+                      src={platform.logo}
+                      alt="Platform Logo"
+                      className="w-[130px] h-[42px] sm:w-[180px] sm:h-[60px] lg:w-[220px] lg:h-[74px] 
+                        object-contain drop-shadow-lg filter brightness-145"
+                    />
+                    {platform.category === 'New' && (
+                      <img
+                        src={NEW_BADGE_SRC}
+                        alt="New"
+                        className="self-start -mt-4 sm:-mt-2 lg:-mt-3 w-12 h-12 sm:w-14 sm:h-14 lg:w-16 lg:h-16 object-contain drop-shadow-[0_2px_8px_rgba(0,0,0,0.28)]"
+                      />
+                    )}
+                  </div>
                 </div>
 
                 <div></div>
