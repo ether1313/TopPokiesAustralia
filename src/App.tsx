@@ -3,6 +3,7 @@ import Header from './components/Header';
 import Hero from './components/Hero';
 import PersonalizedQuiz from './components/PersonalizedQuiz';
 import GamePlatforms from './components/GamePlatforms';
+import TrustpilotSection from './components/TrustpilotSection';
 import LiveWithdrawals from './components/LiveWithdrawals';
 import PlayerReviews from './components/PlayerReviews';
 import Certifications from './components/Certifications';
@@ -134,6 +135,7 @@ function App() {
           <>
             <Hero />
             <GamePlatforms />
+            <TrustpilotSection />
             <LiveWithdrawals />
             <PlayerReviews />
             <PersonalizedQuiz />
