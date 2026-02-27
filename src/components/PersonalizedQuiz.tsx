@@ -26,7 +26,7 @@ const partners: Partner[] = [
   { name: 'BYBID9', logo: '/gameslogo/bybid9.png', url: 'https://bybid9.net/RFBYPARTNERSHIPSEO', minDeposit: 10, gameTypes: ['slot'], fastPayout: true },
   { name: 'GUCCI9', logo: '/gameslogo/gucci9.png', url: 'https://gucci9au.org/RFGUPARTNERSHIPSEO', minDeposit: 10, gameTypes: ['slot', 'live'], fastPayout: true },
   { name: 'IPAY9', logo: '/gameslogo/ipay9.png', url: 'https://ipay9aud.com/RFPARNERSHIPSEO', minDeposit: 10, gameTypes: ['live'], fastPayout: true },
-  { name: 'KINGBET9', logo: '/gameslogo/kingbet9.png', url: 'https://king9au.com/RFPARNERSHIPSEO1SEO', minDeposit: 10, gameTypes: ['slot'], fastPayout: true },
+  { name: 'KINGBET9', logo: '/gameslogo/kingbet9.png', url: 'https://kingb9.com/RFPARNERSHIPSEO1SEO', minDeposit: 10, gameTypes: ['slot'], fastPayout: true },
   { name: 'ME99', logo: '/gameslogo/me99.png', url: 'https://me99aus.net/RFMEPARTNERSHIPSEO', minDeposit: 10, gameTypes: ['slot', 'live'], fastPayout: true },
   { name: 'MICKY9', logo: '/gameslogo/micky9.png', url: 'https://micky9.net/RFMICKYPARTNERSHIPSEO', minDeposit: 10, gameTypes: ['slot'], fastPayout: true },
   { name: 'MRBEAN9', logo: '/gameslogo/mrbean9.png', url: 'https://mrbean9au.com/RFMRPARTNERSHIPSEO', minDeposit: 5, gameTypes: ['slot'], fastPayout: true },

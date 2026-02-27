@@ -92,7 +92,7 @@ const platforms: Platform[] = [
     registerFree: '$100+$10',
     welcomeBonus: 'Slot 100%',
     vipFree: '$299.98',
-    url: 'https://king9au.com/RFPARNERSHIPSEO1SEO',
+    url: 'https://kingb9.com/RFPARNERSHIPSEO1SEO',
     category: 'VIP'
   },
   {
