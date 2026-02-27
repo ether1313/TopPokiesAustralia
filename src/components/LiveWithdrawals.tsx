@@ -2,19 +2,19 @@ import React, { useState, useEffect } from 'react';
 import CountUp from 'react-countup';
 
 const platforms = [
-  { name: 'BP77', color: 'text-[#0f2f66]', logo: '/gameslogo/bp77.png' },
+  { name: 'BIGPAY77', color: 'text-[#0f2f66]', logo: '/gameslogo/bp77.png' },
   { name: 'BYBID9', color: 'text-[#0f2f66]', logo: '/gameslogo/bybid9.png' },
   { name: 'GUCCI9', color: 'text-[#0f2f66]', logo: '/gameslogo/gucci9.png' },
   { name: 'IPAY9', color: 'text-[#0f2f66]', logo: '/gameslogo/ipay9.png' },
   { name: 'KINGBET9', color: 'text-[#0f2f66]', logo: '/gameslogo/kingbet9.png' },
   { name: 'ME99', color: 'text-[#0f2f66]', logo: '/gameslogo/me99.png' },
-  { name: 'MICKY13', color: 'text-[#0f2f66]', logo: '/gameslogo/micky9.png' },
+  { name: 'MICKY9', color: 'text-[#0f2f66]', logo: '/gameslogo/micky9.png' },
   { name: 'MRBEAN9', color: 'text-[#0f2f66]', logo: '/gameslogo/mrbean9.png' },
-  { name: 'POKEMON13', color: 'text-[#0f2f66]', logo: '/gameslogo/pokemon9.png' },
+  { name: 'PKM9', color: 'text-[#0f2f66]', logo: '/gameslogo/pokemon9.png' },
   { name: 'QUEEN13', color: 'text-[#0f2f66]', logo: '/gameslogo/queen13.png' },
   { name: 'ROLEX9', color: 'text-[#0f2f66]', logo: '/gameslogo/rolex9.png' },
   { name: 'ACE96AU', color: 'text-[#0f2f66]', logo: '/gameslogo/ace96au.png' },
-  { name: 'WINNIE13', color: 'text-[#0f2f66]', logo: '/gameslogo/winnie777.png' },
+  { name: 'WINNIE777', color: 'text-[#0f2f66]', logo: '/gameslogo/winnie777.png' },
 ];
 
 
