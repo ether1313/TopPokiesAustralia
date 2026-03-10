@@ -33,6 +33,7 @@ const partners: Partner[] = [
   { name: 'POKEMON9', logo: '/gameslogo/pokemon9.png', url: 'https://pokemonau.net/RFPOPARTNERSHIPSEO', minDeposit: 20, gameTypes: ['live'], fastPayout: true },
   { name: 'QUEEN13', logo: '/gameslogo/queen13.png', url: 'https://queen13au.com/RFQUPARTNERSHIPSEO', minDeposit: 10, gameTypes: ['slot', 'live'], fastPayout: true },
   { name: 'ROLEX9', logo: '/gameslogo/rolex9.png', url: 'https://rolex9au.com/RFR9PARTNERSHIPSEO', minDeposit: 19, gameTypes: ['slot'], fastPayout: true },
+  { name: 'MRBOOM9', logo: '/gameslogo/mrboom9.png', url: 'https://mrboom9.com/RFTOPPOKIESAUSTRALIAA', minDeposit: 3, gameTypes: ['slot'], fastPayout: true },
 ];
 
 const getBudgetTier = (minDeposit: number): BudgetRange => {

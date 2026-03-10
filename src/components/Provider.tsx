@@ -83,6 +83,7 @@ const randomPartnerLinks = [
   'https://micky9.net/RFMICKYPARTNERSHIPSEO',
   'https://winnie777.net/RFWIPARTNERSHIPSEO',
   'https://ace96au.com/RFGUPARTNERSHIPSEO',
+  'https://mrboom9.com/RFTOPPOKIESAUSTRALIAA',
 ];
 
 const Provider: React.FC = () => {

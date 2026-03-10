@@ -160,6 +160,17 @@ const platforms: Platform[] = [
     vipFree: '$688.88',
     url: 'https://rolex9au.com/RFR9PARTNERSHIPSEO',
     category: 'Premium'
+  },
+  {
+    id: 14,
+    logo: '/gameslogo/mrboom9.png',
+    minDeposit: '3',
+    totalGames: '4500+',
+    registerFree: '$99.99',
+    welcomeBonus: 'Slot 50%',
+    vipFree: '200% Bns',
+    url: 'https://mrboom9.com/RFTOPPOKIESAUSTRALIAA',
+    category: 'New'
   }
 ];
 
