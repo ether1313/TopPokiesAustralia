@@ -20,17 +20,6 @@ type Platform = {
 const platforms: Platform[] = [
   {
     id: 1,
-    logo: '/gameslogo/ace96au.png',
-    minDeposit: '8',
-    totalGames: '4000+',
-    registerFree: '$96',
-    welcomeBonus: 'Slot 50%',
-    vipFree: '200%',
-    url: 'https://ace96au.com/RFGUPARTNERSHIPSEO',
-    category: 'New'
-  },
-  {
-    id: 2,
     logo: '/gameslogo/bp77.png',
     minDeposit: '10',
     totalGames: '5000+',
@@ -39,6 +28,17 @@ const platforms: Platform[] = [
     vipFree: '$263.31',
     url: 'https://bigpay77.net/RFBP77PARNERSHIPSEO',
     category: 'VIP'
+  },
+  {
+    id: 2,
+    logo: '/gameslogo/ace96au.png',
+    minDeposit: '8',
+    totalGames: '4000+',
+    registerFree: '$96',
+    welcomeBonus: 'Slot 50%',
+    vipFree: '200%',
+    url: 'https://ace96au.com/RFGUPARTNERSHIPSEO',
+    category: 'New'
   },
   {
     id: 3,
@@ -343,7 +343,7 @@ const GamePlatforms: React.FC = () => {
                   className="claim-attention-ring relative w-full bg-[#1d4ed8] rounded-xl py-2 sm:py-2.5 hover:bg-[#1e40af] hover:scale-[1.02] transition-all duration-300 shadow-[0_0_12px_rgba(15,47,102,0.35)]"
                 >
                   <div className="w-full flex items-center justify-center space-x-1 sm:space-x-2 font-lilita">
-                    <span className="text-[clamp(16px,2vw,28px)] font-bold tracking-wide text-white animate-heartbeat-text">
+                    <span className="text-[clamp(16px,2vw,24px)] font-bold tracking-wide text-white animate-heartbeat-text">
                       Claim Now
                     </span>
                   </div>

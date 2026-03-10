@@ -250,7 +250,7 @@ const PreLandingGate = ({ onEnter }: PreLandingGateProps) => {
             >
               <span className="text-lg leading-none">x</span>
             </button>
-            <h2 className="mt-1 text-white text-xl sm:text-2xl font-lilita tracking-wide font-bold">LIVE WIN FEED</h2>
+            <h2 className="mt-1 text-white text-xl sm:text-2xl font-lilita tracking-wide font-bold">🔔 Live Winnings..</h2>
 
           </div>
 
@@ -286,7 +286,7 @@ const PreLandingGate = ({ onEnter }: PreLandingGateProps) => {
               <button
                 type="button"
                 onClick={handleClose}
-                className="w-full rounded-xl border border-cyan-200/40 bg-[#1d4ed8] px-5 py-3 text-white shadow-[0_0_22px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.01] hover:bg-[#1e40af]"
+                className="w-full rounded-xl border border-cyan-200/40 bg-[#1d4ed8] px-5 py-2 text-white shadow-[0_0_22px_rgba(37,99,235,0.45)] transition-all duration-300 hover:scale-[1.01] hover:bg-[#1e40af]"
               >
                 <span className="relative flex items-center justify-center gap-2 font-lilita tracking-wide text-lg font-bold">
                   <span>ENTER SITE</span>
